@@ -17,6 +17,13 @@
 }
 
 @media only screen and (max-width: 759px) {
+    footer {
+        font-size: clamp(0.5rem, 3.5vw, 1rem);
+        top: calc(100% - clamp(0.5rem, 3.5vw, 1rem) - 10px);
+    }
+    img {
+        margin-right: 8px;
+    }
     .card {
         flex-direction: column;
         height: 100vh;
@@ -27,31 +34,24 @@
         border-bottom-right-radius: 40px;
         padding: 40px;
     }
-    .summary {
-        width: calc(100vw - 60px);
-        padding: 40px;
-        padding-top: 0px;
-        height: 100%;
-    }
     .result-header {
         margin: 0px;
-    }
-    .result-desc {
-        padding: 10px;
-    }
-    footer {
-        font-size: clamp(10px, 2.5vw, 18px);
-        top: calc(100% - clamp(10px, 2.5vw, 18px) - 5px);
-    }
-    img {
-        margin-right: 8px;
     }
     .circle {
         scale: 75%;
         margin: 0px;
     }
     .result-name {
-        font-size: 24px;
+        font-size: 1.4rem;
+    }
+    .result-desc {
+        padding: 10px;
+    }
+    .summary {
+        width: calc(100vw - 60px);
+        padding: 40px;
+        padding-top: 0px;
+        height: 100%;
     }
     button {
         margin-top: clamp(15%, 15%, 60px);
@@ -59,6 +59,12 @@
 }
 
 @media only screen and (min-width: 760px) {
+    footer {
+        top: calc(100% - 1rem - 10px);
+    }
+    img {
+        margin-right: 4px;
+    }
     .card {
         flex-direction: row;
     }
@@ -67,22 +73,16 @@
         border-radius: 40px;
         padding: 40px;
     }
-    .summary {
-        width: 250px;
-        padding: 40px;
-        justify-content: center;
+    .result-name {
+        font-size: 1.9rem;
     }
     .result-desc {
         padding: 10px;
     }
-    footer {
-        top: calc(100% - 23px);
-    }
-    img {
-        margin-right: 4px;
-    }
-    .result-name {
-        font-size: 34px;
+    .summary {
+        width: 250px;
+        padding: 40px;
+        justify-content: center;
     }
     button {
         margin-top: 35px;
@@ -90,11 +90,14 @@
     }
 }
 
+html {
+    font-size: 112.5%;
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+
 body {
     margin: 0px;
     padding: 0px;
-    font-size: 18px;
-    font-family: 'Hanken Grotesk', sans-serif;
     background-color: hsl(var(--pale-blue));
     display: flex;
     align-items: center;
@@ -119,6 +122,8 @@ img {
     background-color: hsl(var(--white));
     display: flex;
 }
+
+/* Result Panel */
 
 .result {
     background: linear-gradient(hsl(var(--bg-light-slate-blue)), hsl(var(--bg-light-royale-blue)));
@@ -146,7 +151,7 @@ img {
 
 .score {
     font-weight: 800;
-    font-size: 80px;
+    font-size: 4.5rem;
     color: hsl(var(--white));
     display: block;
     margin: 0px;
@@ -168,11 +173,9 @@ img {
     color: hsla(var(--light-lavender), 0.8);
     text-align: center;
     margin: 0px;
-
 }
 
-
-
+/* Summary Panel */
 
 .summary {
     border-radius: 40px;
@@ -219,7 +222,7 @@ img {
 
 button {
     font-family: 'Hanken Grotesk', sans-serif;
-    font-size: 16px;
+    font-size: 0.9rem;
     background-color: hsl(var(--dark-gray-blue));
     border: none;
     color: hsl(var(--white));
@@ -233,6 +236,8 @@ button:hover {
     background: linear-gradient(hsl(var(--bg-light-slate-blue)), hsl(var(--bg-light-royale-blue)));
     cursor: pointer;
 }
+
+/* Summary Categories Utility */
 
 .component:nth-of-type(1) .component-name p { color: hsl(var(--light-red)); }
 
