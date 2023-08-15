@@ -2,18 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./styles/style.css">
   <title>Frontend Mentor | Results summary component</title>
 </head>
 <body>
   <main>
     <article class="card">
       <section class="result">
-        <h1>Your Result</h1>
+        <h1 class="result-header">Your Result</h1>
         <figure class="circle">
           <p class="score">76</p>
-          <p>of 100</p>
+          <p class="score-boundary">of 100</p>
         </figure>
         <p class="result-name">Great</p>
         <p class="result-desc">You scored higher than 65% of the people who have taken these tests.</p>
@@ -21,42 +25,17 @@
 
       <section class="summary">
         <h1>Summary</h1>
-        <article class="component-list">
-          <section class="component">
-            <article class="component-name">
-              <img src="./assets/images/icon-reaction.svg" alt="Lightning bolt icon representing reaction speed">
-              <p>Reaction</p>
-            </article>
-            <p class="component-score"><span class="text-highlight">80</span> / 100</p>
-          </section>
-          <section class="component">
-            <article class="component-name">
-              <img src="./assets/images/icon-memory.svg" alt="Brain icon representing memory">
-              <p>Memory</p>
-            </article>
-            <p class="component-score"><span class="text-highlight">92</span> / 100</p>
-          </section>
-          <section class="component">
-            <article class="component-name">
-              <img src="./assets/images/icon-verbal.svg" alt="Speaking bubble representing verbal abilities">
-              <p>Verbal</p>
-            </article>
-            <p class="component-score"><span class="text-highlight">61</span> / 100</p>
-          </section>
-          <section class="component">
-            <article class="component-name">
-              <p>Visual</p>
-              <img src="./assets/images/icon-visual.svg" alt="Eye representing visual abilities">
-            </article>
-            <p class="component-score"><span class="text-highlight">72</span> / 100</p>
-          </section>
+        <article id="component-list" class="component-list">
+          <!-- Populated by JavaScript (./scripts/index.js) -->
         </article>
+        <button>Continue</button>
       </section>
     </article>
   </main>
   <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Serban Untu</a>.
   </footer>
+  <script src="./scripts/index.js"></script>
 </body>
 </html>
