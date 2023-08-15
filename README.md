@@ -31,7 +31,7 @@ Users are able to:
 
 ### Links
 
-- [Solution]()
+- [Solution](https://www.frontendmentor.io/solutions/json-data-fetching-flexbox-semantic-html-responsive-layout-OFwzIGbfyo)
 - [Live Site](https://fm-results-summary-component-serbanuntu.vercel.app)
 
 ## My process
